@@ -3,17 +3,21 @@
 /**
  * _isdigit - A function that checks for a digit 0 through 9
  * @c: A parameter
- * Return: 0 or 1
+ * Return: 1 if c is a digit or 0 if otherwise
  */
 
 int _isdigit(int c)
 {
-	if (c >= 48 && < 58)
+	char i = '0';
+	int isdigit = 0;
+
+	for (; i <= '9'; i++)
 	{
-		return (1);
+		if (i == c)
+		{
+			isdigit = 1;
+			break;
+		}
 	}
-	else
-	{
-		return (0);
-	}
+	return (isdigit);
 }
